@@ -1,0 +1,10 @@
+function (err, res) {}{"level":"info","message":"Server running in the port 3000 - Server - {}","timestamp":"11:26:15"}
+{"level":"info","message":"Server running in the port 3000 - Server - {}","timestamp":"11:33:05"}
+{"level":"error","message":"[object Object] - [valueController.Delete] - {}","timestamp":"11:33:13"}
+{"level":"info","message":"Server running in the port 3000 - Server - {}","timestamp":"11:33:52"}
+{"level":"info","message":"Server running in the port 3000 - Server - {}","timestamp":"11:34:24"}
+{"level":"info","message":"[object Object] - [valueController.Delete] - {}","timestamp":"11:34:27"}
+{"level":"info","message":"Server running in the port 3000 - Server - {}","timestamp":"11:35:12"}
+{"level":"info","message":"DATA ALL - [valueController.Delete] - {}","timestamp":"11:35:15"}
+{"level":"info","message":"Server running in the port 3000 - Server - {}","timestamp":"11:39:21"}
+{"level":"info","message":"Server running in the port 3000 - Server - {}","timestamp":"11:39:44"}

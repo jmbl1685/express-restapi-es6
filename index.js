@@ -6,4 +6,5 @@ import winston from './config/log'
 
 const port = config.server.port
 
-app.listen(port, () => winston.info('Server', `Server running in the port ${port}`))
+app.listen(port, () =>
+    winston.info('Server', `${config.server.message}${port}`))

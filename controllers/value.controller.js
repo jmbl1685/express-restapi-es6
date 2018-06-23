@@ -9,7 +9,7 @@ const valueController = {}
 valueController.Get = async (req, res) => {
   try {
 
-    await res.status(200).send({ data: config.dataresponse.success })
+    await res.status(200).send({ data: config.message.success })
 
   } catch (err) {
     winston.error('[valueController.Get]', err)

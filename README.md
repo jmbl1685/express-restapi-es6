@@ -1,9 +1,15 @@
 [![Express Logo](https://image.ibb.co/hkTRKo/logo_express_restapi.png)](http://expressjs.com/)
 
-Structure to build an REST API using Express.js
+Custom structure to build an REST API using Express.js
 
-[![Linux Build][travis-image]][travis-url]
-[![Windows Build][appveyor-image]][appveyor-url]
+
+![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)
+![Shippable](https://img.shields.io/shippable/5444c5ecb904a4b21567b0ff.svg)
+![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
+![PyPI - Status](https://img.shields.io/pypi/status/Django.svg)
+
+
+
 
 ## Installation
 
@@ -44,6 +50,7 @@ $ npm run test
 * babel-preset-es2015 https://github.com/babel/babel/tree/master/packages/babel-preset-es2015
 * Cors https://github.com/expressjs/cors
 * Express https://github.com/expressjs/express
+* Celebrate https://github.com/arb/celebrate
 * Helmet https://github.com/helmetjs/helmet
 * Winston https://github.com/winstonjs/winston
 * Mocha https://github.com/mochajs/mocha

@@ -8,13 +8,13 @@ chai.use(chaiHttp)
 
 let should = chai.should()
 
-describe('PEOPLE CONTROLLER TESTS', () => {
+describe('VALUE CONTROLLER TESTS', () => {
 
   it('valueController.Post', () => {
 
     const body = { id: '12345', value: 'Juan Batty' }
     chai.request(server)
-      .post('/value')
+      .post('api/value')
       .send(body)
       .end((err, res) => {
         res.should.have.status(200)
@@ -25,7 +25,7 @@ describe('PEOPLE CONTROLLER TESTS', () => {
   it('valueController.Get', () => {
 
     chai.request(server)
-      .get('/value')
+      .get('api/value')
       .end((err, res) => {
         res.should.have.status(200)
       })
@@ -36,7 +36,7 @@ describe('PEOPLE CONTROLLER TESTS', () => {
 
     const id = '12345'
     chai.request(server)
-      .get(`/value/${id}`)
+      .get(`api/value/${id}`)
       .end((err, res) => {
         res.should.have.status(200)
       })
@@ -47,7 +47,7 @@ describe('PEOPLE CONTROLLER TESTS', () => {
 
     const id = '12345'
     chai.request(server)
-      .put(`/value/${id}`)
+      .put(`api/value/${id}`)
       .end((err, res) => {
         res.should.have.status(200)
       })
@@ -58,7 +58,7 @@ describe('PEOPLE CONTROLLER TESTS', () => {
 
     const id = '12345'
     chai.request(server)
-      .delete(`/value/${id}`)
+      .delete(`api/value/${id}`)
       .end((err, res) => {
         res.should.have.status(200)
       })

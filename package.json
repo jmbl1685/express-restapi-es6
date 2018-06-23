@@ -1,7 +1,7 @@
 {
-  "name": "structure-express-app",
+  "name": "express-restapi-es6",
   "version": "1.0.0",
-  "description": "",
+  "description": "Custom structure to build an REST API using Express.js",
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js",

@@ -12,18 +12,15 @@ valueController.Get = async (req, res) => {
     await res.status(200).send({ data: config.dataresponse.success })
 
   } catch (err) {
-    console.log(err)
     winston.error('[valueController.Get]', err)
   }
 }
 
 valueController.GetByID = async (req, res) => {
   try {
+
     const id = req.params.id
-    if (id === null | undefined)
-      await res.status(404).send({ data: 'DATA NOT FOUND' })
-    else
-      await res.status(200).send({ data: `DATA ${id}` })
+    await res.status(200).send({ data: `GETBYID OK - ${id}` })
 
   } catch (err) {
     winston.error('[valueController.GetByID]', err)
@@ -32,9 +29,11 @@ valueController.GetByID = async (req, res) => {
 
 valueController.Post = async (req, res) => {
   try {
+
     const { id, value } = req.body
     const body = new Value(id, value)
     await res.status(200).send({ DATA: body })
+
   } catch (err) {
     winston.error('[valueController.Post]', err)
   }
@@ -42,12 +41,10 @@ valueController.Post = async (req, res) => {
 
 valueController.Put = async (req, res) => {
   try {
-    const id = req.params.id
 
-    if (id === null | undefined)
-      await res.status(404).send({ data: 'DATA NOT UPDATED' })
-    else
-      await res.status(200).send({ data: `DATA ${id}` })
+    const id = req.params.id
+    await res.status(200).send({ data: `PUT [OK] - ${id}` })
+
   } catch (err) {
     winston.error('[valueController.Put]', err)
   }
@@ -56,12 +53,10 @@ valueController.Put = async (req, res) => {
 
 valueController.Delete = async (req, res) => {
   try {
-    const id = req.params.id
 
-    if (id === null | undefined)
-      await res.status(404).send({ data: 'DATA NOT DELETED' })
-    else
-      await res.status(200).send({ data: `DATA ${id}` })
+    const id = req.params.id
+    await res.status(200).send({ data: `DELETE [OK] - ${id}` })
+
   } catch (err) {
     winston.error('[valueController.Delete]', err)
   }

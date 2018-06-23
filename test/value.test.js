@@ -22,47 +22,47 @@ describe('VALUE CONTROLLER TESTS', () => {
 
   })
 
-  // it('valueController.Get', () => {
+  it('valueController.Get', () => {
 
-  //   chai.request(server)
-  //     .get('api/value')
-  //     .end((err, res) => {
-  //       res.should.have.status(200)
-  //     })
+    chai.request(server)
+      .get('api/value')
+      .end((err, res) => {
+        res.should.have.status(200)
+      })
 
-  // })
+  })
 
-  // it('valueController.GetByID', () => {
+  it('valueController.GetByID', () => {
 
-  //   const id = '12345'
-  //   chai.request(server)
-  //     .get(`api/value/${id}`)
-  //     .end((err, res) => {
-  //       res.should.have.status(200)
-  //     })
+    const id = '12345'
+    chai.request(server)
+      .get(`api/value/${id}`)
+      .end((err, res) => {
+        res.should.have.status(200)
+      })
 
-  // })
+  })
 
-  // it('valueController.Put', () => {
+  it('valueController.Put', () => {
 
-  //   const id = '12345'
-  //   chai.request(server)
-  //     .put(`api/value/${id}`)
-  //     .end((err, res) => {
-  //       res.should.have.status(200)
-  //     })
+    const id = '12345'
+    chai.request(server)
+      .put(`api/value/${id}`)
+      .end((err, res) => {
+        res.should.have.status(200)
+      })
 
-  // })
+  })
 
-  // it('valueController.Delete', () => {
+  it('valueController.Delete', () => {
 
-  //   const id = '12345'
-  //   chai.request(server)
-  //     .delete(`api/value/${id}`)
-  //     .end((err, res) => {
-  //       res.should.have.status(200)
-  //     })
+    const id = '12345'
+    chai.request(server)
+      .delete(`api/value/${id}`)
+      .end((err, res) => {
+        res.should.have.status(200)
+      })
 
-  // })
+  })
 
 })

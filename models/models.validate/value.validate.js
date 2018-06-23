@@ -1,8 +1,8 @@
 'use strict'
 
-import { Joi } from 'celebrate'
+import { Joi, celebrate } from 'celebrate'
 
-export default {
+export default celebrate({
     body: Joi.object().keys({
         id: Joi.string().required(),
         value: Joi.string().required()
@@ -13,7 +13,7 @@ export default {
     query: {
 
     },
-    headers: {
+    headers: Joi.object({
 
-    }
-}
+    }).unknown()
+})

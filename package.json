@@ -6,7 +6,8 @@
   "scripts": {
     "start": "babel-node index.js",
     "dev": "nodemon index.js --exec babel-node",
-    "test": "nodemon test/value.test.js --exec mocha --compilers js:babel-core/register"
+    "test": "mocha test/value.test.js --compilers js:babel-core/register",
+    "test:nodemon": "nodemon test/value.test.js --exec mocha --compilers js:babel-core/register"
   },
   "license": "MIT",
   "dependencies": {

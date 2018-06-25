@@ -17,7 +17,6 @@ describe('VALUE CONTROLLER TESTS', () => {
       .post('/api/value')
       .send(body)
       .end((err, res) => {
-        console.log(res.body)
         res.should.have.status(200)
       })
 

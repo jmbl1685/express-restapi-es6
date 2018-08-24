@@ -1,65 +1,71 @@
 'use strict'
 
-import Value from '../models/value.model'
+import Value from '../models/value/value.model'
 import config from '../config/config'
-import winston from '../config/log'
 
-const valueController = {}
+export default {
 
-valueController.Get = async (req, res) => {
-  try {
+  Get: (req, res) => {
 
-    await res.status(200).send({ data: config.message.success })
+    try {
 
-  } catch (err) {
-    winston.error('[valueController.Get]', err)
+      const { id } = req.params
+
+      if (id == null) {
+        return res.status(200).send({ GET: 'Success!' })
+      }
+
+      res.status(200).send({ GET: id })
+
+    } catch (err) {
+      console.error(err)
+    }
+
+  },
+
+  Post: (req, res) => {
+
+    try {
+
+      const { id, value } = req.body
+      const body = new Value(id, value)
+      res.status(200).send({ 'POST': body })
+
+    } catch (err) {
+      console.error(err)
+    }
+
+  },
+
+  Put: (req, res) => {
+
+    try {
+
+      const id = req.params.id
+      res.status(200).send({ PUT: id })
+
+    } catch (err) {
+      console.error(err)
+    }
+
+  },
+
+  Delete: (req, res) => {
+
+    try {
+
+      const id = req.params.id
+      res.status(200).send({ DELETE: id })
+
+    } catch (err) {
+      console.error(err)
+    }
+
   }
+
 }
 
-valueController.GetByID = async (req, res) => {
-  try {
 
-    const id = req.params.id
-    await res.status(200).send({ data: `GETBYID OK - ${id}` })
 
-  } catch (err) {
-    winston.error('[valueController.GetByID]', err)
-  }
-}
 
-valueController.Post = async (req, res) => {
-  try {
 
-    const { id, value } = req.body
-    const body = new Value(id, value)
-    await res.status(200).send({ DATA: body })
-
-  } catch (err) {
-    winston.error('[valueController.Post]', err)
-  }
-}
-
-valueController.Put = async (req, res) => {
-  try {
-
-    const id = req.params.id
-    await res.status(200).send({ data: `PUT [OK] - ${id}` })
-
-  } catch (err) {
-    winston.error('[valueController.Put]', err)
-  }
-
-}
-
-valueController.Delete = async (req, res) => {
-  try {
-
-    const id = req.params.id
-    await res.status(200).send({ data: `DELETE [OK] - ${id}` })
-
-  } catch (err) {
-    winston.error('[valueController.Delete]', err)
-  }
-}
-
-export default valueController

@@ -3,65 +3,78 @@
 import chai from 'chai'
 import server from '../app'
 import chaiHttp from 'chai-http'
+const expect = chai.expect
 
 chai.use(chaiHttp)
 
-describe('VALUE CONTROLLER TESTS', () => {
+describe('ValueController Test', () => {
 
-  let should = chai.should()
   const body = { id: 'A12345', value: 'Juan Batty' }
 
-  it('valueController.Post', () => {
-   
-    chai.request(server)
-      .post('/api/value')
-      .send(body)
-      .end((err, res) => {
-        res.should.have.status(200)
-      })
+  // it('POST api/value', (done) => {
 
-  })
+  //   chai.request(server)
+  //     .post('/api/value')
+  //     .send(body)
+  //     .end((err, res) => {
+  //       if (err) done(err)
+  //       expect(res).to.have.status(200)
+  //       done()
+  //     })
+  // })
 
-  it('valueController.Get', () => {
+  it('GET api/value', (done) => {
 
     chai.request(server)
       .get('/api/value')
       .end((err, res) => {
-        res.should.have.status(200)
+        if (err) done(err)
+        expect(res).to.have.status(200)
+        expect(res.body).to.property('GET')
+        done()
       })
 
   })
 
-  it('valueController.GetByID', () => {
+  it('GET api/value/:id', (done) => {
 
     const id = '12345'
     chai.request(server)
       .get(`/api/value/${id}`)
       .end((err, res) => {
-        res.should.have.status(200)
+        if (err) done(err)
+        expect(res).to.have.status(200)
+        expect(res.body).to.property('GET')
+        done()
       })
 
   })
 
-  it('valueController.Put', () => {
+  it('PUT api/value', (done) => {
 
     const id = '12345'
     chai.request(server)
       .put(`/api/value/${id}`)
       .send(body)
       .end((err, res) => {
-        res.should.have.status(200)
+        if (err) done(err)
+        expect(res).to.have.status(200)
+        expect(res.body).to.property('PUT')
+        done()
       })
 
   })
 
-  it('valueController.Delete', () => {
+  it('DELETE api/value', (done) => {
 
     const id = '12345'
     chai.request(server)
       .delete(`/api/value/${id}`)
       .end((err, res) => {
-        res.should.have.status(200)
+        if (err) done(err)
+        expect(res).to.have.status(200)
+        expect(res.body).to.property('DELETE')
+        done()
       })
 
   })

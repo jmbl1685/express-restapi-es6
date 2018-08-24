@@ -8,7 +8,7 @@ const { body, params, query, headers } = {
         value: Joi.string().required()
     }),
     params: Joi.object({
-        id: Joi.string().alphanum().required()
+        id: Joi.string().alphanum().optional()
     }).unknown(),
     query: {
 

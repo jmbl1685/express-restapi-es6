@@ -1,10 +1,12 @@
 'use strict'
 
 import app from './app'
-import config from './config/config'
-import winston from './config/log'
+import chalk from 'chalk'
+import 'dotenv/config';
 
-const port = config.server.port
+const port = process.env.PORT
+const message = process.env.MESSAGE
 
-app.listen(port, () =>
-    winston.info('Server', `${config.server.message}${port}`))
+app.listen(port, () => {
+    console.log(chalk.blue(`${message} ${port}`))
+})

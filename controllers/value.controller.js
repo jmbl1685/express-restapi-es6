@@ -1,7 +1,6 @@
 'use strict'
 
 import Value from '../models/value/value.model'
-import config from '../config/config'
 
 export default {
 

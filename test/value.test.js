@@ -11,17 +11,17 @@ describe('ValueController Test', () => {
 
   const body = { id: 'A12345', value: 'Juan Batty' }
 
-  // it('POST api/value', (done) => {
+  it('POST api/value', (done) => {
 
-  //   chai.request(server)
-  //     .post('/api/value')
-  //     .send(body)
-  //     .end((err, res) => {
-  //       if (err) done(err)
-  //       expect(res).to.have.status(200)
-  //       done()
-  //     })
-  // })
+    chai.request(server)
+      .post('/api/value')
+      .send(body)
+      .end((err, res) => {
+        if (err) done(err)
+        expect(res).to.have.status(200)
+        done()
+      })
+  })
 
   it('GET api/value', (done) => {
 

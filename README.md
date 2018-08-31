@@ -11,7 +11,7 @@ Custom structure to build an REST API using Express.js
 ## Installation
 
 ```sh
-$ npm install -g express-restapi-es6@1.1.5
+$ npm install -g express-restapi-es6
 ```
 
 ## Quick Start

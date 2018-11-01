@@ -36,23 +36,10 @@ describe('ValueController Test', () => {
 
   })
 
-  it('GET api/value/:id', (done) => {
-
-    const id = '12345'
-    chai.request(server)
-      .get(`/api/value/${id}`)
-      .end((err, res) => {
-        if (err) done(err)
-        expect(res).to.have.status(200)
-        expect(res.body).to.property('GET')
-        done()
-      })
-
-  })
-
   it('PUT api/value', (done) => {
 
     const id = '12345'
+
     chai.request(server)
       .put(`/api/value/${id}`)
       .send(body)
@@ -68,6 +55,7 @@ describe('ValueController Test', () => {
   it('DELETE api/value', (done) => {
 
     const id = '12345'
+    
     chai.request(server)
       .delete(`/api/value/${id}`)
       .end((err, res) => {

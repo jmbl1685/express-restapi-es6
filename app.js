@@ -4,6 +4,7 @@ import express from 'express'
 import morgan from 'morgan'
 import helmet from 'helmet'
 import cors from 'cors'
+import { routes } from './routes/_routes'
 
 const app = express()
 
@@ -13,7 +14,7 @@ app.use(cors())
 app.use(morgan('dev'))
 app.use(helmet())
 
-require('./routes/value.routes').default(app)
+routes(app)
 
 export default app
 

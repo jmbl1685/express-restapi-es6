@@ -1,17 +1,18 @@
 'use strict'
 
-import valueController from '../controllers/value.controller'
-import valueValidate from '../models/value/value.validate'
-import { errors } from 'celebrate'
+import {
+  AddValue,
+  GetValue,
+  UpdateValue,
+  DeleteValue
+} from '../controllers/valueController'
 
 export default (app) => {
 
-  app.post('/api/value', valueValidate.BODY, valueController.Post)
-  app.get('/api/value/:id?', valueValidate.PARAMS, valueController.Get)
-  app.put('/api/value/:id', valueValidate.BODY_AND_PARAMS, valueController.Put)
-  app.delete('/api/value/:id', valueValidate.PARAMS, valueController.Delete)
-
-  app.use(errors())
+  app.post('/api/value', AddValue)
+  app.get('/api/value/:id?', GetValue)
+  app.put('/api/value/:id', UpdateValue)
+  app.delete('/api/value/:id', DeleteValue)
 
 }
 

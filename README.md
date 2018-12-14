@@ -2,6 +2,7 @@
 
 Custom structure to build an REST API using Express.js
 
+[![Build Status](https://dev.azure.com/jmbl1685-github/github/_apis/build/status/jmbl1685.express-restapi-es6?branchName=master)](https://dev.azure.com/jmbl1685-github/github/_build/latest?definitionId=4?branchName=master)
 [![Build Status](https://travis-ci.org/jmbl1685/express-restapi-es6.svg?branch=master)](https://travis-ci.org/jmbl1685/express-restapi-es6)
 [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/jmbl1685/express-restapi-es6#readme)
 
